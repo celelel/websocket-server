@@ -21,7 +21,6 @@ wss.on('connection', function connection(ws) {
     clients = clients.filter(c => c !== ws);
   });
 
-  ws.send("Hello from server!");
 });
 
 function broadcastPacket(packet) {
