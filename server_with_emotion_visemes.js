@@ -2,8 +2,9 @@
 const WebSocket = require('ws');
 const readline = require('readline');
 
-const wss = new WebSocket.Server({ host: "192.168.18.85", port: 8080 });
-console.log("✅ WebSocket server started on ws://localhost:8080");
+const PORT = process.env.PORT || 8080;
+const wss = new WebSocket.Server({ port: PORT });
+console.log("✅ WebSocket server started on port", PORT);
 
 let clients = [];
 
